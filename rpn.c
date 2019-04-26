@@ -20,10 +20,9 @@ main(void)
   engr120_stack_t *stack = &s;
 
   char *token = strtok(input, " ");
-
   while (token != NULL) {
-    show(*stack);
     int converted = atoi(token);
+    show(*stack);
 
     if (converted || strcmp(token, "0") == 0) {
       push(stack, converted);
